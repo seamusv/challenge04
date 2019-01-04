@@ -22,14 +22,16 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage("assets/images/city.jpg"),
-                fit: BoxFit.cover,
-              )),
-              child: Padding(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage("assets/images/city.jpg"),
+            fit: BoxFit.cover,
+          )),
+          child: ListView(
+            children: <Widget>[
+              Padding(
                 padding: EdgeInsets.only(left: 20.0, right: 20.0, top: MediaQuery.of(context).padding.top + 20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,7 +124,8 @@ class MyHomePage extends StatelessWidget {
                   ],
                 ),
               )
-          )
+            ],
+          )),
     );
   }
 }
